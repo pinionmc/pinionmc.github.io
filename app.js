@@ -72,17 +72,3 @@ function submitList(event) {
 
 audio.volume = 0.25;
 console.log("Wtf are yo doing in the console?")
-
-var loopLimit = 5;
-        var loopCounter = 0;
-        document.getElementById("loop-limited").addEventListener(
-          "ended",
-          function () {
-            if (loopCounter < loopLimit) {
-              this.currentTime = 0;
-              this.play();
-              loopCounter++;
-            }
-          },
-          false
-        );  

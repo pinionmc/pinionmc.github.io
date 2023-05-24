@@ -1,6 +1,6 @@
 const listInput = document.getElementById("listInput");
 const output = document.getElementById("show");
-  
+
 
 
 
@@ -93,7 +93,7 @@ function on() {
   p1.appendChild(m)
   p1.appendChild(n)
 
-  music.volume = 0.1;
+  m.volume = 0.1;
 
   n1.textContent = "on";
 

@@ -1,6 +1,7 @@
 const listInput = document.getElementById("listInput");
 const output = document.getElementById("show");
-const audio = document.getElementById("audio");
+  
+
 
 
 function submitList(event) {
@@ -70,5 +71,30 @@ function submitList(event) {
 }
 
 
-audio.volume = 0.25;
+
 console.log("Wtf are yo doing in the console?")
+
+let p2 = true
+
+function on() {
+  const m = document.createElement("audio")
+  const n = document.createElement("source")
+  const p1 = document.getElementById("p")
+  const n1 = document.getElementById("n2");
+
+  // m.setAttribute("controls", "")
+  m.setAttribute("autoplay", "")
+  m.setAttribute("loop", "")
+  m.setAttribute("ip", "audio")
+  
+  m.setAttribute("src", "backgroundmusic.mp3")
+  m.setAttribute("type", "audio/mp3")
+
+  p1.appendChild(m)
+  p1.appendChild(n)
+
+  music.volume = 0.1;
+
+  n1.textContent = "on";
+
+}

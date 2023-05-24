@@ -1,5 +1,6 @@
 const listInput = document.getElementById("listInput");
 const output = document.getElementById("show");
+const audio = document.getElementById("audio");
 
 
 function submitList(event) {
@@ -67,4 +68,7 @@ function submitList(event) {
   // Recoloring the todolist column to indicate that it is done.
   z2.addEventListener("click", colorChange);
 }
+
+
+audio.volume = 0.25;
 console.log("Wtf are yo doing in the console?")

@@ -40,7 +40,9 @@
     </style>
   </head>
   <body>
-    <audio src="backgroundmusic.mp3" autoplay loop></audio>
+    <audio autoplay="" loop="" id="audio" >
+      <source src="backgroundmusic.mp3" type="audio/mp3">
+    </audio>
     <center>
       <form onsubmit="submitList(event)" style="text-align: center">
         <label for="listInput">Your todo list here:</label>

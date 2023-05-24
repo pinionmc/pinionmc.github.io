@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> ToDo List</title>
+    <style>
+      div{
+        padding-left: 155px;
+      }
+      table {
+        padding: 70px;
+      }
+      th {
+        border: 1px solid rgb(31, 85, 185);
+        padding-right: 80px;
+        padding-left: 80px;
+        margin-top: 50px;
+        border-radius: 5px;
+        background-color: rgba(100, 148, 237, 0.5);
+        size: 5px;
+      }
+      td {
+        border: 1px solid rgb(102, 8, 8);
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-top: 50px;
+        background-color: rgba(231, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 5px;
+      }
+      body{
+        background-image: url("https://cdna.artstation.com/p/assets/images/images/036/878/092/original/phazed-waterfall-pixelart-8-gif-1920.gif?1618874121");
+        background-size:cover;
+        background-position: top;
+      }
+      button{
+        background-color: rgba(137, 43, 226, 0.295);
+        border-radius: 2px;
+        border: 1px solid purple;
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="backgroundmusic.mp3" autoplay loop></audio>
+    <center>
+      <form onsubmit="submitList(event)" style="text-align: center">
+        <label for="listInput">Your todo list here:</label>
+        <input type="text" name="name" id="listInput" required />
+        <input type="submit" value="Submit" />
+      </form>
+      <div>
+        <table id="show">
+          <tr>
+            <th>Status</th>
+            <th>Things To do</th>
+            <th style="background-color: rgba(255, 255, 255, 0); border: 0px"></th>
+          </tr>
+        </table>
+      </div>
+    </center>
+    <script src="app.js"></script>
+  </body>
+</html>

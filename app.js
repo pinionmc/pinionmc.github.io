@@ -75,7 +75,6 @@ function submitList(event) {
 
 console.log("Wtf are yo doing in the console?")
 
-let p2 = true
 
 function on() {
   if (n1.textContent === "Music: Off") {
@@ -90,10 +89,7 @@ function on() {
     n1.textContent = "Music: On";
   }
   else{
-    m.setAttribute("autoplay", "")
-    m.setAttribute("loop", "")
-    m.setAttribute("src", "")
-    m.setAttribute("type", "")
+    m.volume = 0;
 
     n1.textContent = "Music: Off"
   }

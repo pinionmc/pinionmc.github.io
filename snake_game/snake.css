@@ -1,10 +1,12 @@
-.snake {
-    height: 20px;
-    width: 50px;
-    background-color: black;
+#snake {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    top: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
 }
 
 body .test {

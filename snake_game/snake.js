@@ -1,15 +1,16 @@
 const s = document.getElementById("snake");
-const test = document.getElementById("test");
+// const test = document.getElementById("test");
 
 document.addEventListener("keydown", function (event) {
-  const key = event.key;
-  let rect = s.getBoundingClientRect();
-
-  test.textContent = key;
-
-  if (key === "ArrowDown") {
-    console.log(rect.y);
-
-    s.setAttribute("style", "top: 30px")
-  }
+  var a = event.key;
+  // if (event.key === 'e' || event.key === 'E') {
+  //     var py = parseInt(s.style.top) ;
+  //     s.style.top = py  + 1 + 'px';
+  // }
 });
+setInterval(() => {
+  if (a === "e" || a === "E") {
+    var py = parseInt(s.style.top);
+    s.style.top = py + 1 + "px";
+  }
+}, 1000);

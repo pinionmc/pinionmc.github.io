@@ -1,0 +1,13 @@
+.snake {
+    height: 20px;
+    width: 50px;
+    background-color: black;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    top: 500px;
+}
+
+body .test {
+
+    top: 500px;
+}

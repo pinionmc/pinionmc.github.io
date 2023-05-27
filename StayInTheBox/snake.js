@@ -36,7 +36,6 @@ setInterval(() => {
 
   }
 }, 1000);
-
 setInterval(() => {
   if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
     positionx = 637.5;
@@ -50,6 +49,12 @@ setInterval(() => {
       alert("Your Score Is: " + speed[0]);
       ligit.textContent = "Its a ligit run";
     }, 100);}}, 1);
+
+    setInterval(() => {
+      if(ligit.textContent === "Its a ligit run") {
+        location.reload();
+      }
+    }, 500)
 
 function moveDown() {
   positiony = positiony + speed[0];

@@ -1,15 +1,16 @@
 #snake {
     border-radius: 50px;
-
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
+    width: 25px;
+    height: 25px;
     background-color: red;
 }
 
-body .test {
-
-    top: 500px;
+#box {
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    width: 600px;
+    height: 600px;
+    background-color: black;
 }

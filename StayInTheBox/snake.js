@@ -3,11 +3,12 @@ const text = document.getElementById("text");
 const s = document.getElementById("speed");
 const speedup = document.getElementById("speedup");
 const speeddown = document.getElementById("speeddown");
+const ligit = document.getElementById("ligit");
 let moving = true;
-let movingto;
+let movingto = "No Were";
 let positiony = 307.5;
 let positionx = 637.5;
-const speed = [5];
+const speed = [1];
 let once = true;
 let x1 = 0;
 let x2 = 0;
@@ -20,6 +21,11 @@ function up() {
   speed[0] = speed[0] + 1
   s.textContent = "Current Speed: " + speed[0]
 }
+
+setInterval(() => {
+  if(movingto !== "No Were"){up()}
+}, 1000)
+
 
 function down() {
   if (speed[0] !== 1) {
@@ -37,10 +43,15 @@ setInterval(() => {
   if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
     positionx = 637.5;
     positiony = 307.5;
-    moving = false;
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
-    alert("How tf r u dead? u just had to stay in the box.");
+    ligit.textContent = "Its a ligit run"
+    
+    setTimeout(() => {
+      location.reload();
+      alert("Your Score Is: " + speed[0]);
+      ligit.textContent = "Its a ligit run"
+    }, 100);
   }
 }, 1);
 

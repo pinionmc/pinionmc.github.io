@@ -4,7 +4,7 @@ const s = document.getElementById("speed");
 const speedup = document.getElementById("speedup");
 const speeddown = document.getElementById("speeddown");
 let moving = true;
-let movingto = "down";
+let movingto;
 let positiony = 307.5;
 let positionx = 637.5;
 const speed = [5];

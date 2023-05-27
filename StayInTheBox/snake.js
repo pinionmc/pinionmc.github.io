@@ -17,27 +17,22 @@ let x4 = 0;
 snake.style.left = positionx + "px";
 snake.style.top = positiony + "px";
 
-function up() {
-  speed[0] = speed[0] + 1
-  s.textContent = "Current Speed: " + speed[0]
-}
-
 setInterval(() => {
-  if(movingto !== "No Were"){up()}
-}, 1000)
-
-
-function down() {
-  if (speed[0] !== 1) {
-    speed[0] = speed[0] - 1
-    s.textContent = "Current Speed: " + speed[0]
+  if (movingto !== "No Were") {
+    up();
   }
-}
+}, 1000);
 
 function txt() {
-  text.innerHTML ="going: " + movingto + "<br> X-Coordinate: " + (positionx-637.5) + "<br> Y-Coordinate: " + (positiony-307.5);
+  text.innerHTML =
+    "going: " +
+    movingto +
+    "<br> X-Coordinate: " +
+    (positionx - 637.5) +
+    "<br> Y-Coordinate: " +
+    (positiony - 307.5);
 }
-txt()
+txt();
 
 setInterval(() => {
   if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
@@ -45,12 +40,12 @@ setInterval(() => {
     positiony = 307.5;
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
-    ligit.textContent = "Its a ligit run"
-    
+    ligit.textContent = "Its a ligit run";
+
     setTimeout(() => {
       location.reload();
       alert("Your Score Is: " + speed[0]);
-      ligit.textContent = "Its a ligit run"
+      ligit.textContent = "Its a ligit run";
     }, 100);
   }
 }, 1);
@@ -95,28 +90,44 @@ document.addEventListener("keydown", function (event) {
     x1 = 1;
     x3 = 0;
     x4 = 0;
-  } else if (event.key === "ArrowUp" && movingto !== "down" && once && x2 === 0) {
+  } else if (
+    event.key === "ArrowUp" &&
+    movingto !== "down" &&
+    once &&
+    x2 === 0
+  ) {
     window.requestAnimationFrame(moveUp);
     movingto = "up";
     moving = true;
     x2 = 1;
     x3 = 0;
     x4 = 0;
-  } else if (event.key === "ArrowLeft" && movingto !== "right" && once && x3 === 0) {
+  } else if (
+    event.key === "ArrowLeft" &&
+    movingto !== "right" &&
+    once &&
+    x3 === 0
+  ) {
     window.requestAnimationFrame(moveLeft);
     movingto = "left";
     moving = true;
     x3 = 1;
     x1 = 0;
     x2 = 0;
-  } else if (event.key === "ArrowRight" && movingto !== "left" && once && x4 === 0) {
+  } else if (
+    event.key === "ArrowRight" &&
+    movingto !== "left" &&
+    once &&
+    x4 === 0
+  ) {
     window.requestAnimationFrame(moveRight);
     movingto = "right";
     moving = true;
     x4 = 1;
     x1 = 0;
     x2 = 0;
-  } if (event.key === "s" && movingto !== "up" && once && x1 === 0) {
+  }
+  if (event.key === "s" && movingto !== "up" && once && x1 === 0) {
     window.requestAnimationFrame(moveDown);
     movingto = "down";
     moving = true;
@@ -146,11 +157,17 @@ document.addEventListener("keydown", function (event) {
     x2 = 0;
   }
 
-txt()
+  txt();
 });
 
 setInterval(() => {
-  text.innerHTML = "going: " + movingto + "<br> X-Coordinate: " + (positionx - 637.5) + "<br> Y-Coordinate: " + (positiony - 307.5);
+  text.innerHTML =
+    "going: " +
+    movingto +
+    "<br> X-Coordinate: " +
+    (positionx - 637.5) +
+    "<br> Y-Coordinate: " +
+    (positiony - 307.5);
 }, 200);
 
-s.textContent = "Current Speed: " + speed[0]
+s.textContent = "Current Speed: " + speed[0];

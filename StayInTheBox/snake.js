@@ -19,7 +19,7 @@ snake.style.top = positiony + "px";
 
 setInterval(() => {
   if (movingto !== "No Were") {
-    up();
+    speed += 1;
   }
 }, 1000);
 

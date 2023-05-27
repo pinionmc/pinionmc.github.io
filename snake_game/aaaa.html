@@ -19,7 +19,7 @@
     const box = document.getElementById('box');
 
     // Set initial variables
-    let animationId = null;
+
     let movingDown = false;
 
     // Function to move the box down
@@ -29,7 +29,7 @@
 
       // Continue moving if the 'E' key is still being pressed
       if (movingDown) {
-        animationId = requestAnimationFrame(moveDown);
+        let animationId = requestAnimationFrame(moveDown);
       }
     }
 

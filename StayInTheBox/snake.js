@@ -1,7 +1,7 @@
 const snake = document.getElementById("snake");
 const text = document.getElementById("text");
 const s = document.getElementById("speed");
-const ligit = document.getElementById("ligit");
+const legit = document.getElementById("legit");
 const box = document.getElementById("box");
 const border = document.getElementById("border");
 let moving = true;
@@ -42,7 +42,7 @@ setInterval(() => {
     positiony = 307.5;
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
-    ligit.textContent = "Its a ligit run";
+    legit.textContent = "Its a legit run";
     snake.remove()
     text.remove()
     s.remove()
@@ -52,11 +52,11 @@ setInterval(() => {
       txt()
       location.reload();
       alert("Your Score Is: " + speed[0]);
-      ligit.textContent = "Its a ligit run";
+      legit.textContent = "Its a legit run";
     }, 100);}}, 1);
 
     setInterval(() => {
-      if(ligit.textContent !== "") {
+      if(legit.textContent !== "") {
         location.reload();
       }
     }, 500)

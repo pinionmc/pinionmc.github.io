@@ -1,9 +1,9 @@
 const snake = document.getElementById("snake");
 const text = document.getElementById("text");
 const s = document.getElementById("speed");
-const speedup = document.getElementById("speedup");
-const speeddown = document.getElementById("speeddown");
 const ligit = document.getElementById("ligit");
+const box = document.getElementById("box");
+const border = document.getElementById("border");
 let moving = true;
 let movingto = "No Were";
 let positiony = 307.5;
@@ -43,6 +43,11 @@ setInterval(() => {
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
     ligit.textContent = "Its a ligit run";
+    snake.remove()
+    text.remove()
+    s.remove()
+    border.remove()
+    box.remove()
     setTimeout(() => {
       txt()
       location.reload();

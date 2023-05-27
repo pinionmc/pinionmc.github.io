@@ -17,13 +17,7 @@ let x4 = 0;
 snake.style.left = positionx + "px";
 snake.style.top = positiony + "px";
 
-setInterval(() => {
-  if (movingto !== "No Were") {
-    speed[0] += 1;
-    s.textContent = "Current Speed: " + speed[0];
 
-  }
-}, 1000);
 
 function txt() {
   text.innerHTML =
@@ -33,7 +27,16 @@ function txt() {
     (positionx - 637.5) +
     "<br> Y-Coordinate: " +
     (positiony - 307.5);
+    s.textContent = "Current Speed: " + speed[0];
 }
+setInterval(() => {
+  if (movingto !== "No Were") {
+    speed[0] += 1;
+    txt()
+
+  }
+}, 1000);
+
 setInterval(() => {
   if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
     positionx = 637.5;
@@ -42,7 +45,7 @@ setInterval(() => {
     snake.style.top = positiony + "px";
     ligit.textContent = "Its a ligit run";
     setTimeout(() => {
-      s.textContent = "Current Speed: " + speed[0];
+      txt()
       location.reload();
       alert("Your Score Is: " + speed[0]);
       ligit.textContent = "Its a ligit run";
@@ -155,7 +158,4 @@ document.addEventListener("keydown", function (event) {
     x2 = 0;
   }
 });
-
 setInterval(() => {txt()}, 200);
-
-s.textContent = "Current Speed: " + speed[0];

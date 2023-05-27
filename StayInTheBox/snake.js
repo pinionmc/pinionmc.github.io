@@ -51,7 +51,7 @@ setInterval(() => {
     }, 100);}}, 1);
 
     setInterval(() => {
-      if(ligit.textContent === "Its a ligit run") {
+      if(ligit.textContent !== "") {
         location.reload();
       }
     }, 500)

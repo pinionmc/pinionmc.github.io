@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(94, 93, 93);
+    color: azure;
+}
+
 #snake {
     border-radius: 50px;
     position: absolute;
@@ -14,6 +19,13 @@
     height: 600px;
     background-color: black;
     border-radius: 10px;
-    border: 5px;
-    border-color: silver;
+}
+#border {
+    position: absolute;
+    top: 10px;
+    left: 340px;
+    width: 620px;
+    height: 620px;
+    background-color: rgba(23, 116, 31, 0.671);
+    border-radius: 10px;
 }

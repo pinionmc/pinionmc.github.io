@@ -19,7 +19,9 @@ snake.style.top = positiony + "px";
 
 setInterval(() => {
   if (movingto !== "No Were") {
-    speed += 1;
+    speed[0] += 1;
+    s.textContent = "Current Speed: " + speed[0];
+
   }
 }, 1000);
 
@@ -42,7 +44,9 @@ setInterval(() => {
     snake.style.top = positiony + "px";
     ligit.textContent = "Its a ligit run";
 
+
     setTimeout(() => {
+      s.textContent = "Current Speed: " + speed[0];
       location.reload();
       alert("Your Score Is: " + speed[0]);
       ligit.textContent = "Its a ligit run";
@@ -168,6 +172,7 @@ setInterval(() => {
     (positionx - 637.5) +
     "<br> Y-Coordinate: " +
     (positiony - 307.5);
+    
 }, 200);
 
 s.textContent = "Current Speed: " + speed[0];

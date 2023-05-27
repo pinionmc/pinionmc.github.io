@@ -7,7 +7,7 @@ let moving = true;
 let movingto = "down";
 let positiony = 307.5;
 let positionx = 637.5;
-const speed = [1];
+const speed = [5];
 let once = true;
 let x1 = 0;
 let x2 = 0;
@@ -40,7 +40,7 @@ setInterval(() => {
     moving = false;
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
-    alert("youaredead");
+    alert("How tf r u dead? u just had to stay in the box.");
   }
 }, 1);
 
@@ -99,6 +99,34 @@ document.addEventListener("keydown", function (event) {
     x1 = 0;
     x2 = 0;
   } else if (event.key === "ArrowRight" && movingto !== "left" && once && x4 === 0) {
+    window.requestAnimationFrame(moveRight);
+    movingto = "right";
+    moving = true;
+    x4 = 1;
+    x1 = 0;
+    x2 = 0;
+  } if (event.key === "s" && movingto !== "up" && once && x1 === 0) {
+    window.requestAnimationFrame(moveDown);
+    movingto = "down";
+    moving = true;
+    x1 = 1;
+    x3 = 0;
+    x4 = 0;
+  } else if (event.key === "w" && movingto !== "down" && once && x2 === 0) {
+    window.requestAnimationFrame(moveUp);
+    movingto = "up";
+    moving = true;
+    x2 = 1;
+    x3 = 0;
+    x4 = 0;
+  } else if (event.key === "a" && movingto !== "right" && once && x3 === 0) {
+    window.requestAnimationFrame(moveLeft);
+    movingto = "left";
+    moving = true;
+    x3 = 1;
+    x1 = 0;
+    x2 = 0;
+  } else if (event.key === "d" && movingto !== "left" && once && x4 === 0) {
     window.requestAnimationFrame(moveRight);
     movingto = "right";
     moving = true;

@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Move Element Down on 'E' Key Press</title>
-    <style>
-        #myElement {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            background-color: red;
-        }
-    </style>
+  <style>
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: relative;
+      top: 0;
+    }
+  </style>
 </head>
 <body>
-    <div id="myElement"></div>
+  <div id="box"></div>
 
-    <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'e' || event.key === 'E') {
-                var element = document.getElementById('myElement');
-                var currentTop = parseInt(element.style.top) || 0;
-                element.style.top = currentTop + 1 + 'px';
-            }
-        });
-    </script>
+  <script>
+    // Get the box element
+    const box = document.getElementById('box');
+
+    // Set initial variables
+    let animationId = null;
+    let movingDown = false;
+
+    // Function to move the box down
+    function moveDown() {
+      const topPos = parseInt(box.style.top) || 0;
+      box.style.top = topPos + 1 + 'px';
+
+      // Continue moving if the 'E' key is still being pressed
+      if (movingDown) {
+        animationId = requestAnimationFrame(moveDown);
+      }
+    }
+
+    // Event listener for keydown
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'e' && !movingDown) {
+        movingDown = true;
+        moveDown();
+      }
+    });
+
+    // Event listener for keyup
+    document.addEventListener('keyup', function(event) {
+      if (event.key === 'a' && movingDown) {
+        movingDown = false;
+        cancelAnimationFrame(animationId);
+      }
+    });
+
+    // Timer for the loop
+    function loop() {
+      while (true) {
+        // Code to be executed in the loop
+        console.log('Loop iteration');
+
+        // Break the loop if the 'A' key is pressed
+        if (!movingDown) {
+          break;
+        }
+
+        // Delay before the next iteration
+        setTimeout(loop, 1000);
+        break;
+      }
+    }
+
+    // Start the loop
+    loop();
+  </script>
 </body>
 </html>

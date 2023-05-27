@@ -169,3 +169,4 @@ document.addEventListener("keydown", function (event) {
   }
 });
 setInterval(() => {txt()}, 200);
+console.log("Please dont use Macro! :'(")

@@ -17,8 +17,6 @@ let x4 = 0;
 snake.style.left = positionx + "px";
 snake.style.top = positiony + "px";
 
-
-
 function txt() {
   text.innerHTML =
     "going: " +
@@ -27,13 +25,11 @@ function txt() {
     (Math.floor(positionx) - 637) +
     "<br> Y-Coordinate: " +
     (Math.floor(positiony) - 307);
-    s.textContent = "Current Speed: " + Math.floor(speed[0]);
+  s.textContent = "Current Speed: " + Math.floor(speed[0]);
 }
 setInterval(() => {
   if (movingto !== "No Were") {
     speed[0] += 0.1;
-    txt()
-
   }
 }, 100);
 setInterval(() => {
@@ -43,23 +39,26 @@ setInterval(() => {
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
     legit.textContent = "Its a legit run";
-    snake.remove()
-    text.remove()
-    s.remove()
-    border.remove()
-    box.remove()
+    snake.remove();
+    text.remove();
+    s.remove();
+    border.remove();
+    box.remove();
     setTimeout(() => {
-      txt()
+      txt();
       location.reload();
       alert("Your Score Is: " + Math.floor(speed[0]));
       legit.textContent = "Its a legit run";
-    }, 100);}}, 1);
+    }, 100);
+  }
+  txt();
+}, 1);
 
-    setInterval(() => {
-      if(legit.textContent !== "") {
-        location.reload();
-      }
-    }, 500)
+setInterval(() => {
+  if (legit.textContent !== "") {
+    location.reload();
+  }
+}, 500);
 
 function moveDown() {
   positiony = positiony + speed[0];
@@ -168,5 +167,4 @@ document.addEventListener("keydown", function (event) {
     x2 = 0;
   }
 });
-setInterval(() => {txt()}, 200);
-console.log("Please dont use Macro! :'(")
+console.log("Please dont use Macro! :'(");

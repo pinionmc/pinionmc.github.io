@@ -24,10 +24,10 @@ function txt() {
     "going: " +
     movingto +
     "<br> X-Coordinate: " +
-    (positionx - 637.5) +
+    (Math.floor(positionx) - 637) +
     "<br> Y-Coordinate: " +
-    (positiony - 307.5);
-    s.textContent = "Current Speed: " + speed[0];
+    (Math.floor(positiony) - 307);
+    s.textContent = "Current Speed: " + Math.floor(speed[0]);
 }
 setInterval(() => {
   if (movingto !== "No Were") {
@@ -51,7 +51,7 @@ setInterval(() => {
     setTimeout(() => {
       txt()
       location.reload();
-      alert("Your Score Is: " + speed[0]);
+      alert("Your Score Is: " + Math.floor(speed[0]));
       legit.textContent = "Its a legit run";
     }, 100);}}, 1);
 

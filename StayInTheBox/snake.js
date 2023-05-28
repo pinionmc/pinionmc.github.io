@@ -31,11 +31,11 @@ function txt() {
 }
 setInterval(() => {
   if (movingto !== "No Were") {
-    speed[0] += 1;
+    speed[0] += 0.1;
     txt()
 
   }
-}, 1000);
+}, 100);
 setInterval(() => {
   if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
     positionx = 637.5;

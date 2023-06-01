@@ -1,7 +1,10 @@
 const body = document.getElementById("body");
-const screen = document.getElementById("screen");
+const screen1 = document.getElementById("screen");
 const buttons = {};
-for (let i = 0; i <= 9; i++) {buttons["b" + i] = document.getElementById("b" + i);}
+for (let i = 0; i <= 9; i++) {
+  buttons["b" + i] = document.getElementById("b" + i);
+}
+
 const be = document.getElementById("be");
 const bd = document.getElementById("bd");
 const bD = document.getElementById("bD");
@@ -10,50 +13,82 @@ const bm = document.getElementById("bm");
 const ba = document.getElementById("ba");
 
 function bu1() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 1;
+  }
 }
-function bu2() {
-  alert("ok");
+function bu2() {  
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 2;
+  }
 }
 function bu3() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 3;
+  }
 }
 function bu4() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 4;
+  }
 }
 function bu5() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 5;
+  }
 }
 function bu6() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 6;
+  }
 }
 function bu7() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 7;
+  }
 }
 function bu8() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 8;
+  }
 }
 function bu9() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 9;
+  }
 }
 function bu0() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + 0;
+  }
 }
 function bud() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + ".";
+  }
 }
 function buD() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + "/";
+  }
 }
 function bus() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + "-";
+  }
 }
 function bua() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + "+";
+  }
 }
 function bum() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + "X";
+  }
 }
 function bue() {
-  alert("ok");
+  if (screen1.textContent.length < 7) {
+    screen1.textContent + "=";
+  }
 }

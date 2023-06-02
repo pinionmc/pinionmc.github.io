@@ -42,11 +42,14 @@ setInterval(() => {
     text.remove();
     s.remove();
     box.remove();
+    legit.setAttribute("style", "border: #fff solid 2px;")
     setTimeout(() => {
       txt();
       location.reload();
       alert("Your Score Is: " + Math.floor(speed[0]));
+
       legit.textContent = "Its a legit run";
+
     }, 100);
   }
   txt();

@@ -9,6 +9,11 @@ body {
 #legit {
   font-size: 200px;
   text-align: center;
+  background: linear-gradient(to right, #46237a, #8a4fff);
+  margin: 50px;
+  margin-top: 80px;
+  border-radius: 10px;
+  
 }
 #box {
   position: absolute;
@@ -17,7 +22,7 @@ body {
   width: 600px;
   height: 600px;
   background: linear-gradient(to right, #46237a, #8a4fff);
-  border: #fff solid;
+  border: #fff solid  2px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -28,7 +33,7 @@ body {
   position: absolute;
   width: 25px;
   height: 25px;
-  background-color: rgb(0, 255, 255);
+  font-size: 24px;
 }
 
 /* Header Styles */

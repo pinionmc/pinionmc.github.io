@@ -3,10 +3,9 @@ const text = document.getElementById("text");
 const s = document.getElementById("speed");
 const legit = document.getElementById("legit");
 const box = document.getElementById("box");
-const border = document.getElementById("border");
 let moving = true;
 let movingto = "No Were";
-let positiony = 307.5;
+let positiony = 372.5;
 let positionx = 637.5;
 const speed = [1];
 let once = true;
@@ -24,7 +23,7 @@ function txt() {
     "<br> X-Coordinate: " +
     (Math.floor(positionx) - 637) +
     "<br> Y-Coordinate: " +
-    (Math.floor(positiony) - 307);
+    (Math.floor(positiony) - 372) * -1;
   s.textContent = "Current Speed: " + Math.floor(speed[0]);
 }
 setInterval(() => {
@@ -33,16 +32,15 @@ setInterval(() => {
   }
 }, 100);
 setInterval(() => {
-  if (positionx > 925 || positiony > 595 || positionx < 350 || positiony < 20) {
+  if (positionx > 925 || positiony > 660 || positionx < 350 || positiony < 85) {
     positionx = 637.5;
-    positiony = 307.5;
+    positiony = 372.5;
     snake.style.left = positionx + "px";
     snake.style.top = positiony + "px";
     legit.textContent = "Its a legit run";
     snake.remove();
     text.remove();
     s.remove();
-    border.remove();
     box.remove();
     setTimeout(() => {
       txt();
